@@ -1,9 +1,12 @@
-import { StyleSheet } from 'react-native';
+/**
+ * dvajs
+ */
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import Home from './Home';
-import Login from './Login';
+import DvaIndex from './dva/dvaIndex';
+import Index from './index';
 
 const Stack = createNativeStackNavigator();
 
@@ -12,25 +15,16 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name="Login"
-          component={Login}
-          options={{ headerTitle: 'Login' }}
+          name="stateList"
+          component={Index}
+          options={{ headerTitle: 'stateList' }}
         />
         <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{ headerTitle: 'Home' }}
+          name="dva"
+          component={DvaIndex}
+          options={{ headerTitle: 'Dva' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
