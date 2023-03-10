@@ -12,6 +12,11 @@ const Index: React.FC<any> = (props) => {
       }} style={{ backgroundColor: 'white', width, padding: 20 }}>
         <Text>dvajs</Text>
       </TouchableOpacity>
+      <TouchableOpacity onPress={() => {
+        navigation.push('mobx');
+      }} style={{ backgroundColor: 'white', width, padding: 20 }}>
+        <Text>mobx</Text>
+      </TouchableOpacity>
     </View>
   );
 };
